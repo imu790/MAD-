@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransportPage"
+    tools:ignore="ExtraText"
+    android:orientation="horizontal"
+    android:background="@color/lite"
+    >
+
+    // App name..
+
+    <RelativeLayout
+        android:id="@+id/appNameTop"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_marginTop="-140dp"
+        android:background="@drawable/ciecleshape">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/lite"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/homeScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appNameTop"
+        android:visibility="visible"
+        android:layout_marginBottom="90dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/lite"
+            >
+
+            <ImageView
+                android:id="@+id/trpagebanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/transportpage"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            // bus
+
+            <TextView
+                android:id="@+id/busTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Bus"
+                android:textColor="@color/gre"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_below="@id/trpagebanner"
+                />
+
+            <HorizontalScrollView
+                android:id="@+id/busScroll"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                tools:ignore="UselessParent"
+                android:layout_below="@id/busTxt"
+                android:padding="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:orientation="horizontal"
+                    >
+                    // Place 1
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/b1"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/bi1"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/hanif"
+                                android:scaleType="centerInside"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/bplace1name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bi1"
+                                android:text="Dhaka  to  Cox's Bazar"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/bprice1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bplace1name"
+                                android:text="Price : 1250 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 2
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/b2"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/bi2"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/hanif"
+                                android:scaleType="centerInside"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/bplace2name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bi2"
+                                android:text="Dhaka  to  Chittagong"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/price2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bplace2name"
+                                android:text="Price : 950 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 3
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/b3"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/bi3"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/hanif"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/bplace3name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bi3"
+                                android:text="Dhaka  to  Sylhet"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/Price3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bplace3name"
+                                android:text="Price : 600 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 4
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/b4"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/bi4"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/hanif"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/bplace4name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bi4"
+                                android:text="Dhaka  to  Rangpur"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/Price4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/bplace4name"
+                                android:text="Price : 750 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            // train
+
+            <TextView
+                android:id="@+id/trainTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Train"
+                android:textColor="@color/gre"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/busScroll"
+                />
+
+            <HorizontalScrollView
+                android:id="@+id/trainScroll"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                tools:ignore="UselessParent"
+                android:layout_below="@id/trainTxt"
+                android:padding="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:orientation="horizontal"
+                    >
+                    // Place 1
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tr1"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/timage1"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/train"
+                                android:scaleType="centerInside"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/tplace1name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/timage1"
+                                android:text="Dhaka to Cox's Bazar"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/tplace1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tplace1name"
+                                android:text="Price : 695 , 1325 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 2
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tr2"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/timage2"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/train"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/tplace2name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/timage2"
+                                android:text="Dhaka to Chittagong"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/tplace2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tplace2name"
+                                android:text="Price : 450 , 855 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 3
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tr3"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/timage3"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/train"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/tplace3name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/timage3"
+                                android:text="Dhaka to Sylhet"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/tplace3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tplace3name"
+                                android:text="Price : 395 , 719 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 4
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tr4"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/timage4"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/train"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/tplace4name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/timage4"
+                                android:text="Dhaka To Rangpur"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/tplace4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tplace4name"
+                                android:text="Price : 585 , 1122 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            // Air
+
+            <TextView
+                android:id="@+id/airTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Air"
+                android:textColor="@color/gre"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/trainScroll"
+                />
+
+            <HorizontalScrollView
+                android:id="@+id/airScroll"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                tools:ignore="UselessParent"
+                android:layout_below="@id/airTxt"
+                android:padding="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:orientation="horizontal"
+                    >
+                    // Place 1
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ar1"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/aimage1"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/biman"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/aplace1name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aimage1"
+                                android:text="Dhaka to Cox's Bazar "
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/aplace1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aplace1name"
+                                android:text="Price : 5828 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 2
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ar2"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/aimage2"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/biman"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/aplace2name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aimage2"
+                                android:text="Dhaka to chittagong"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/aplace2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aplace2name"
+                                android:text="Price : 4950 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 3
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ar3"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/aimage3"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/biman"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/aplace3name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aimage3"
+                                android:text="Dhaka to Sylhet"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/aplace3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aplace3name"
+                                android:text="Price : 4980 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    // Place 4
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ar4"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/aimage4"
+                                android:layout_width="130dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/biman"
+                                android:scaleType="centerCrop"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/aplace4name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aimage4"
+                                android:text="Dhaka to Saidpur"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/aplace4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/aplace4name"
+                                android:text="Price : 5310 tk"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/gre"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentLeft="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    // Navigation Bar
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menuitems"
+        app:itemIconTint="@color/gre"
+        app:itemIconSize="24dp"
+        android:background="@drawable/shape"
+        />
+
+</RelativeLayout>
